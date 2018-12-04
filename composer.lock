@@ -238,16 +238,16 @@
         },
         {
             "name": "burdamagazinorg/thunder",
-            "version": "8.2.29",
+            "version": "8.2.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BurdaMagazinOrg/thunder-distribution.git",
-                "reference": "9bcf37bfa00d5c2da73b6ae0a1c10ec6d645aa35"
+                "reference": "28808dd0b400cffc0f62f628d8714a7a03035144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BurdaMagazinOrg/thunder-distribution/zipball/9bcf37bfa00d5c2da73b6ae0a1c10ec6d645aa35",
-                "reference": "9bcf37bfa00d5c2da73b6ae0a1c10ec6d645aa35",
+                "url": "https://api.github.com/repos/BurdaMagazinOrg/thunder-distribution/zipball/28808dd0b400cffc0f62f628d8714a7a03035144",
+                "reference": "28808dd0b400cffc0f62f628d8714a7a03035144",
                 "shasum": ""
             },
             "require": {
@@ -304,6 +304,7 @@
                 "drupal/nexx_integration": "^1.0||^2.0",
                 "drupal/paragraphs": "1.5",
                 "drupal/paragraphs_features": "^1.0",
+                "drupal/password_policy": "3.x-dev",
                 "drupal/pathauto": "^1.0",
                 "drupal/redirect": "^1.0",
                 "drupal/responsive_preview": "^1.0",
@@ -372,7 +373,10 @@
                         "Provide inline entity form FieldWidgetDisplay": "https://www.drupal.org/files/issues/2858438_6.patch"
                     },
                     "drupal/scheduler": {
-                        "Scheduler integration with core Content moderation": "https://www.drupal.org/files/issues/2018-08-02/2798689-102.patch"
+                        "Scheduler integration with core Content moderation": "https://www.drupal.org/files/issues/2018-11-28/2798689-136.patch"
+                    },
+                    "drupal/password_policy": {
+                        "Policies should declare a config dependency on the plugin modules": "https://www.drupal.org/files/issues/2018-10-09/2918974-2.patch"
                     }
                 }
             },
@@ -403,7 +407,7 @@
                 }
             ],
             "description": "The thunder distribution",
-            "time": "2018-11-21T09:03:21+00:00"
+            "time": "2018-12-04T09:19:37+00:00"
         },
         {
             "name": "caxy/php-htmldiff",
@@ -3748,6 +3752,16 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch",
+                    "Allow install profile disable": "https://www.drupal.org/files/issues/install-profile-1170362-235.patch",
+                    "Make entity reference work with views": "https://www.drupal.org/files/issues/2174633-174.patch",
+                    "More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/more_link_disappears-1819538-24.patch",
+                    "Limiting options for exposed Language filters": "https://www.drupal.org/files/issues/drupal-exposed-language-filter-errors-2693727-1.patch",
+                    "Allow redirects": "https://www.drupal.org/files/issues/2643466-10.patch",
+                    "Path alias filter by system path": "https://www.drupal.org/files/issues/2018-03-24/path_alias_filter_by-2418755-69.patch",
+                    "Make Book navigation translatable": "https://www.drupal.org/files/issues/book-navigation-translatable-2470896-26.patch"
                 }
             },
             "autoload": {
@@ -3858,6 +3872,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Autosubmit for view filters": "https://www.drupal.org/files/issues/2475595-ctools-autocomplete-fix-24.patch",
+                    "Block.php notices and warnings": "https://www.drupal.org/files/issues/fixblockpager-2820783-21.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5373,6 +5391,9 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Add entity reference in translation": "https://www.drupal.org/files/issues/2018-06-21/inline_entity_form-support_adding_new_entities_when_translating-2822764-32.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6809,6 +6830,68 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_features"
             }
+        },
+        {
+            "name": "drupal/password_policy",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/password_policy",
+                "reference": "4adce5309c029e335fbe11209d413b147d965b30"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/ctools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha4+10-dev",
+                    "datestamp": "1536680280",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Policies should declare a config dependency on the plugin modules": "https://www.drupal.org/files/issues/2018-10-09/2918974-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AohRveTPV",
+                    "homepage": "https://www.drupal.org/user/2760115"
+                },
+                {
+                    "name": "deekayen",
+                    "homepage": "https://www.drupal.org/user/972"
+                },
+                {
+                    "name": "miglius",
+                    "homepage": "https://www.drupal.org/user/18741"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                }
+            ],
+            "description": "Sets up constraints and expiration of passwords.",
+            "homepage": "https://www.drupal.org/project/password_policy",
+            "support": {
+                "source": "http://cgit.drupalcode.org/password_policy"
+            },
+            "time": "2018-10-04T20:09:03+00:00"
         },
         {
             "name": "drupal/pathauto",
