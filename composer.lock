@@ -232,16 +232,16 @@
         },
         {
             "name": "burdamagazinorg/thunder",
-            "version": "8.2.33",
+            "version": "8.2.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BurdaMagazinOrg/thunder-distribution.git",
-                "reference": "49a81a1b9e1c7e19580b477a569f3fd67e5762b3"
+                "reference": "051dc43f36bedb3a987f1f563a05e9f0a323de8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BurdaMagazinOrg/thunder-distribution/zipball/49a81a1b9e1c7e19580b477a569f3fd67e5762b3",
-                "reference": "49a81a1b9e1c7e19580b477a569f3fd67e5762b3",
+                "url": "https://api.github.com/repos/BurdaMagazinOrg/thunder-distribution/zipball/051dc43f36bedb3a987f1f563a05e9f0a323de8c",
+                "reference": "051dc43f36bedb3a987f1f563a05e9f0a323de8c",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
                 "drupal/dropzonejs": "^1.0",
                 "drupal/empty_fields": "^1.0",
                 "drupal/entity": "^1.0",
-                "drupal/entity_browser": "1.6",
+                "drupal/entity_browser": "1.7",
                 "drupal/entity_reference_revisions": "^1.0",
                 "drupal/fb_instant_articles": "dev-1.x",
                 "drupal/field_group": "^1.0",
@@ -296,7 +296,7 @@
                 "drupal/media_expire": "^1.0",
                 "drupal/metatag": "^1.0",
                 "drupal/nexx_integration": "^1.0||^2.0",
-                "drupal/paragraphs": "1.5",
+                "drupal/paragraphs": "1.6",
                 "drupal/paragraphs_features": "^1.0",
                 "drupal/password_policy": "3.x-dev",
                 "drupal/pathauto": "^1.0",
@@ -333,7 +333,9 @@
             "require-dev": {
                 "behat/mink-selenium2-driver": "dev-master",
                 "burdamagazinorg/thunder-dev-tools": "dev-master",
-                "drupal/config_profile": "^1.0"
+                "drupal/config_profile": "^1.0",
+                "mglaman/phpstan-drupal": "^0.11.1",
+                "phpstan/phpstan-deprecation-rules": "^0.11.0"
             },
             "type": "drupal-profile",
             "extra": {
@@ -406,20 +408,20 @@
                 }
             ],
             "description": "The thunder distribution",
-            "time": "2019-01-24T13:03:39+00:00"
+            "time": "2019-02-21T10:45:23+00:00"
         },
         {
             "name": "caxy/php-htmldiff",
-            "version": "v0.1.8",
+            "version": "v0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caxy/php-htmldiff.git",
-                "reference": "6f39bc3717f1d3f915542e431c6c30e43bfe6b7c"
+                "reference": "4bad5c6a4ecc76954d37764e6a29273b6b7bf1f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/6f39bc3717f1d3f915542e431c6c30e43bfe6b7c",
-                "reference": "6f39bc3717f1d3f915542e431c6c30e43bfe6b7c",
+                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/4bad5c6a4ecc76954d37764e6a29273b6b7bf1f8",
+                "reference": "4bad5c6a4ecc76954d37764e6a29273b6b7bf1f8",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +464,7 @@
                 "diff",
                 "html"
             ],
-            "time": "2019-01-15T19:49:36+00:00"
+            "time": "2019-02-20T18:52:14+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -4560,23 +4562,22 @@
         },
         {
             "name": "drupal/entity_browser",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_browser",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "ed80f338cc002e188df21967cf2222a01a88f90c"
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "661b2fde7b726a2a87fb9aa89286c176e0300788"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "drupal/ctools": "*",
                 "drupal/inline_entity_form": "*",
                 "drupal/media_entity": "*",
                 "drupal/paragraphs": "*",
@@ -4589,8 +4590,8 @@
                     "dev-8.x-1.x": "8.1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1536328684",
+                    "version": "8.x-1.7",
+                    "datestamp": "1550237884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4621,12 +4622,20 @@
                     "role": "contributor"
                 },
                 {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
                     "name": "Primsi",
                     "homepage": "https://www.drupal.org/user/282629"
                 },
                 {
                     "name": "marcingy",
                     "homepage": "https://www.drupal.org/user/77320"
+                },
+                {
+                    "name": "oknate",
+                    "homepage": "https://www.drupal.org/user/471638"
                 },
                 {
                     "name": "samuel.mortenson",
@@ -6675,17 +6684,17 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/paragraphs",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "85ba97dd1c602d33fc5904b6e1df5973312afa94"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "cd93e244f3a78dabdcf362adc31e59aad25b3fae"
             },
             "require": {
                 "drupal/core": "~8",
@@ -6713,8 +6722,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1541009695",
+                    "version": "8.x-1.6",
+                    "datestamp": "1550692525",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7684,17 +7693,17 @@
         },
         {
             "name": "drupal/search_api_exclude_entity",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/search_api_exclude_entity",
-                "reference": "8.x-1.0-beta2"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_exclude_entity-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "8f9484cb6eb05ac8c84eb6e12bf7267ac85612b4"
+                "url": "https://ftp.drupal.org/files/projects/search_api_exclude_entity-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "9edda9d52422967a31aeff2d7a919aa126d20ebc"
             },
             "require": {
                 "drupal/core": "*",
@@ -7706,11 +7715,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1497537843",
+                    "version": "8.x-1.0",
+                    "datestamp": "1550759284",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -11028,22 +11037,23 @@
         },
         {
             "name": "sabberworm/php-css-parser",
-            "version": "8.2.0",
+            "version": "8.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
-                "reference": "8be357d90c29c2f6dd426be4cb60bf09ef6d0120"
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/8be357d90c29c2f6dd426be4cb60bf09ef6d0120",
-                "reference": "8be357d90c29c2f6dd426be4cb60bf09ef6d0120",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
+                "codacy/coverage": "^1.4",
                 "phpunit/phpunit": "~4.8"
             },
             "type": "library",
@@ -11068,7 +11078,7 @@
                 "parser",
                 "stylesheet"
             ],
-            "time": "2018-07-13T13:23:56+00:00"
+            "time": "2019-02-22T07:42:52+00:00"
         },
         {
             "name": "sebastian/diff",
